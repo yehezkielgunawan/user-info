@@ -1,27 +1,20 @@
-# UserInfo
+## Tech Stack
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.4.
+- [Angular](https://angular.io/): A platform for building mobile and desktop web applications.
+- [TypeScript](https://www.typescriptlang.org/): A strongly typed programming language which builds on JavaScript giving you better tooling at any scale.
+- [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework for rapidly building custom user interfaces.
+- [Daisy UI](https://daisyui.com/): Tailwind CSS plugin for styled components and a beautiful UI kit.
 
-## Development server
+## References
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Angular Docs](https://angular.io/docs)
 
-## Code scaffolding
+## Additional Notes
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+I have never used Test Driven Development (TDD) technique before. That's why I choose built-in Angular unit test as my testing library and use some elements that I understood.
 
-## Build
+Why I used Tailwind CSS and Daisy UI?
+Those tools are the most familiar for me, and enable me to deliver some mini projects quickly. In other words, it quite boost my productivity.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Why I still use the module based Angular project?
+It's a long time I didn't use Angular as my main frontend framework. So I utilized everything with what I know so far.

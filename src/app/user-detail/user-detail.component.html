@@ -1,0 +1,64 @@
+<h1 class="font-bold text-xl md:text-4xl text-center mt-8">User Detail Info</h1>
+
+<!-- Conditional render using Daisy UI Skeleton if the data is not ready yet -->
+<div *ngIf="!userData" class="loading loading-spinner loading-lg"></div>
+
+<div *ngIf="userData" class="card mt-8">
+  <figure>
+    <img src="https://via.placeholder.com/150" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">{{ userData.name }}</h2>
+    <p>Username: {{ userData.username }}</p>
+    <p>Email: {{ userData.email }}</p>
+    <p>Phone: {{ userData.phone }}</p>
+    <p>
+      Website:
+      <a
+        href="https://{{ userData.website }}"
+        target="_blank"
+        class="link link-info"
+      >
+        {{ userData.website }}
+      </a>
+    </p>
+    <div class="divider"></div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="card w-full bg-accent text-neutral-content">
+        <div class="card-body items-center text-center">
+          <p class="card-title">Address</p>
+          <p>Street: {{ userData.address.street }}</p>
+          <p>Suite: {{ userData.address.suite }}</p>
+          <p>City: {{ userData.address.city }}</p>
+          <p>Zipcode: {{ userData.address.zipcode }}</p>
+        </div>
+      </div>
+      <div class="card w-full bg-neutral text-neutral-content">
+        <div class="card-body items-center text-center">
+          <p class="card-title">Company</p>
+          <p>Name: {{ userData.company.name }}</p>
+          <p>Catch Phrase: {{ userData.company.catchPhrase }}</p>
+          <p>BS: {{ userData.company.bs }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a routerLink="/" class="btn btn-outline w-full flex items-center gap-4">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    class="h-6 w-6"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M15 19l-7-7 7-7"
+    ></path>
+  </svg>
+  Back to home page
+</a>

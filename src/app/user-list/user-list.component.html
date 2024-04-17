@@ -1,0 +1,36 @@
+<h1 class="font-bold text-xl md:text-4xl text-center mt-8">User Info</h1>
+
+<div *ngIf="!userList" class="loading loading-spinner loading-lg"></div>
+
+<div *ngIf="userList" class="overflow-auto">
+  <table class="table table-zebra w-full mt-4">
+    <thead>
+      <tr>
+        <th class="px-4 py-2 border-2">ID</th>
+        <th class="px-4 py-2 border-2">Name</th>
+        <th class="px-4 py-2 border-2">Email</th>
+        <th class="px-4 py-2 border-2">Website</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userList">
+        <td class="border px-4 py-2">{{ user.id }}</td>
+        <td class="border px-4 py-2 flex items-center gap-2">
+          {{ user.name }}
+          <a [routerLink]="['/', user.id]" class="btn btn-primary btn-xs"
+            >Details</a
+          >
+        </td>
+        <td class="border px-4 py-2">{{ user.email }}</td>
+        <td class="border px-4 py-2">
+          <a
+            href="https://{{ user.website }}"
+            target="_blank"
+            class="link link-neutral"
+            >{{ user.website }}</a
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
