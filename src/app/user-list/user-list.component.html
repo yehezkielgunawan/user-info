@@ -1,6 +1,8 @@
 <h1 class="font-bold text-xl md:text-4xl text-center mt-8">User Info</h1>
 
-<div *ngIf="!userList" class="loading loading-spinner loading-lg"></div>
+<div *ngIf="!userList" class="flex items-center justify-center w-full mt-8">
+  <div class="loading loading-spinner loading-lg"></div>
+</div>
 
 <div *ngIf="userList" class="overflow-auto">
   <table class="table table-zebra w-full mt-4">

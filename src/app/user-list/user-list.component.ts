@@ -7,7 +7,7 @@ import { UserService, User } from '../user.service';
   styleUrl: './user-list.component.css',
 })
 export class UserListComponent {
-  userList: User[] = [];
+  userList: User[] | null = null;
 
   constructor(private userService: UserService) {}
 

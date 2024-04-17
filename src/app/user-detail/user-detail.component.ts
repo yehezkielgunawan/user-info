@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './user-detail.component.css',
 })
 export class UserDetailComponent {
-  userData: User = {} as User;
+  userData: User | null = null;
   constructor(
     private userService: UserService,
     private route: ActivatedRoute
